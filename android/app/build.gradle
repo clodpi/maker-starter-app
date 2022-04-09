@@ -173,11 +173,21 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.maker.makerapp"
+        applicationId "io.clodpi.hotspots"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode getVersionCode()
         versionName getNpmVersion()
+    }
+    signingConfigs {
+        release {
+            if (project.hasProperty('APPSTORE_STORE_FILE')) {
+                storeFile file(APPSTORE_STORE_FILE)
+                storePassword APPSTORE_STORE_PASSWORD
+                keyAlias APPSTORE_KEY_ALIAS
+                keyPassword APPSTORE_KEY_PASSWORD
+            }
+        }
     }
     splits {
         abi {
@@ -197,6 +207,7 @@ android {
             }
         }
         release {
+            signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }

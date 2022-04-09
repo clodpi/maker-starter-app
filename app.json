@@ -1,6 +1,6 @@
 {
-  "name": "MakerApp",
-  "displayName": "Maker App",
+  "name": "ClodPiHotspots",
+  "displayName": "ClodPi Hotspots",
   "expo": {
     "scheme": "makerappscheme"
   }
