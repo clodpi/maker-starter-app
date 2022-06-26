@@ -293,13 +293,13 @@ export default {
     view_activity: 'After adding a Hotspot, you can view your account on the ',
     explorer: 'Helium Explorer',
     empty: {
-      body: 'Your add hotspot\ninstructions',
+      body: 'Add and manage hotspots',
       hotspots: {
         add: 'Add Hotspot',
         assertLocation: 'Assert Location',
         transfer: 'Transfer Hotspot',
       },
-      title: 'Add a\n[Placeholder] Miner',
+      title: 'Add a\nClodPi Hotspot',
     },
   },
   learn: {

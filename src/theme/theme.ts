@@ -69,46 +69,33 @@ const palette = {
   black: '#000000',
   white: '#FFFFFF',
   transparent: '#00000000',
+  cpiBlue: '#03a0e3',
   offWhite: '#F9FAFC',
-  bobcatRed: '#EE2737',
-  bobcatDarkGrey: '#333333',
-  bobcatGrey: '#aeaeae',
 }
 
 export const lightThemeColors = {
   ...palette,
 
-  primary: palette.bobcatRed,
+  primary: palette.cpiBlue,
   primaryBackground: palette.white,
   primaryText: palette.black,
-  secondaryBackground: palette.offWhite,
-  secondary: palette.bobcatGrey,
-  secondaryText: palette.bobcatDarkGrey,
-  error: palette.bobcatRed,
-  surface: palette.offWhite,
-  surfaceText: palette.bobcatDarkGrey,
-  surfaceSecondary: palette.offWhite,
-  surfaceSecondaryText: palette.bobcatDarkGrey,
-  surfaceContrast: palette.bobcatDarkGrey,
+
+  secondaryBackground: palette.white,
+  secondary: palette.white,
+  secondaryText: palette.white,
+
+  error: palette.deepOrange,
+
+  surface: palette.cpiBlue,
+
+  surfaceText: palette.white,
+  surfaceSecondary: palette.cpiBlue,
+  surfaceSecondaryText: palette.charcoal,
+  surfaceContrast: palette.cpiBlue,
   surfaceContrastText: palette.white,
 }
-export const darkThemeColors = {
-  ...palette,
 
-  primary: palette.bobcatRed,
-  primaryBackground: palette.black,
-  primaryText: palette.white,
-  secondaryBackground: palette.bobcatDarkGrey,
-  secondary: palette.bobcatDarkGrey,
-  secondaryText: palette.white,
-  error: palette.bobcatRed,
-  surface: palette.bobcatDarkGrey,
-  surfaceText: palette.white,
-  surfaceSecondary: palette.offWhite,
-  surfaceSecondaryText: palette.bobcatDarkGrey,
-  surfaceContrast: palette.white,
-  surfaceContrastText: palette.bobcatDarkGrey,
-}
+export const darkThemeColors = lightThemeColors
 
 export const theme = createTheme({
   colors: lightThemeColors,
