@@ -20,7 +20,7 @@ const LinkAccount = () => {
           universalLink: app.urlScheme,
           requestAppId: getBundleId(),
           callbackUrl: 'makerappscheme://',
-          appName: 'Nebra Hotspot',
+          appName: 'ClodPi Hotspots',
         })
 
         // Check if the wallet URL scheme can be opened.

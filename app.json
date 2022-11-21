@@ -1,6 +1,6 @@
 {
-  "name": "Nebra",
-  "displayName": "Nebra Hotspot",
+  "name": "ClodPiHotspots",
+  "displayName": "ClodPi Hotspots",
   "expo": {
     "scheme": "makerappscheme"
   }

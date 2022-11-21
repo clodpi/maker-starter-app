@@ -119,7 +119,11 @@ const useAppLink = () => {
     if (!url) return
 
     const parsed = queryString.parseUrl(url)
-    if (!parsed.url.includes(APP_LINK_PROTOCOL)) return
+    if (
+      !parsed.url.includes(APP_LINK_PROTOCOL) &&
+      !parsed.url.includes('helium://')
+    )
+      return
 
     const params = queryString.parse(queryString.extract(url))
     const record = AppLinkFields.reduce(
@@ -127,7 +131,9 @@ const useAppLink = () => {
       params,
     ) as AppLink
 
-    const path = parsed.url.replace(APP_LINK_PROTOCOL, '')
+    const path = parsed.url
+      .replace(APP_LINK_PROTOCOL, '')
+      .replace('helium://', '')
     const [resourceType, ...rest] = path.split('/')
     if (resourceType && AppLinkCategories.find((k) => k === resourceType)) {
       record.type = resourceType as AppLinkCategoryType

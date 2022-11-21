@@ -29,7 +29,7 @@ export default {
       nebra_dashboard: {
         title: 'Advanced Fleet Management',
         subtitle:
-          'Remotely control and monitor the health of all your Nebra hotspots',
+          'Remotely control and monitor the health of all your ClodPi hotspots',
       },
     },
   },
@@ -65,8 +65,8 @@ export default {
       create_account: 'Create an account on the Helium Network',
       login_with_helium: 'Already have a Helium Wallet?\nTap to get started.',
       subtitle:
-        'Nebra Hotspot currently supports hotspot onboarding, location assertion, and device transfers.\n\n<b>You must also have the official Helium App installed in order to continue.</b>',
-      title: 'Welcome\nto Nebra',
+        'ClodPi Hotspots currently supports hotspot onboarding, location assertion, and device transfers.\n\n<b>You must also have the official Helium App installed in order to continue.</b>',
+      title: 'Welcome\nto ClodPi Hotspots',
     },
     linkAccount: {
       stepOne: '1. Download a supported Wallet App',
@@ -285,7 +285,7 @@ export default {
       },
       alert_no_permissions: {
         body:
-          'The Nebra Hotspot App needs permission to use Bluetooth. You can enable Bluetooth permission in Settings.',
+          'The ClodPi Hotspots App needs permission to use Bluetooth. You can enable Bluetooth permission in Settings.',
         title: 'Authorize Bluetooth',
       },
       scan: 'Scan for my Hotspot',
@@ -370,7 +370,7 @@ export default {
         transfer: 'Transfer Hotspot',
       },
 
-      title: 'Nebra Hotspot Setup',
+      title: 'ClodPi Hotspots Setup',
     },
   },
   learn: {
@@ -422,7 +422,7 @@ export default {
   permissions: {
     location: {
       message:
-        'The Nebra Hotspot App needs access to your location for Bluetooth discovery and to enable location assertion. This information will never be sold or shared.',
+        'The ClodPi Hotspots App needs access to your location for Bluetooth discovery and to enable location assertion. This information will never be sold or shared.',
       title: 'Location Permission',
     },
   },

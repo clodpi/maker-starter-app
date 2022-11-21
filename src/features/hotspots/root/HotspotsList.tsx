@@ -8,7 +8,6 @@ import Box from '../../../components/Box'
 import Text from '../../../components/Text'
 import HotspotListItem from '../../../components/HotspotListItem'
 import { RootState } from '../../../store/rootReducer'
-import WelcomeOverview from './WelcomeOverview'
 import FocusAwareStatusBar from '../../../components/FocusAwareStatusBar'
 import { distance } from '../../../utils/location'
 import { isHotspot } from '../../../utils/hotspotUtils'
@@ -120,7 +119,6 @@ const HotspotsList = ({
       <SectionList
         sections={sections}
         keyExtractor={keyExtractor}
-        ListHeaderComponent={<WelcomeOverview />}
         renderSectionHeader={renderHeader}
         renderItem={renderItem}
         contentContainerStyle={contentContainerStyle}

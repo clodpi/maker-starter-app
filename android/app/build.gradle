@@ -97,7 +97,6 @@ project.ext.react = [
 ]
 
 apply from: "../../node_modules/react-native/react.gradle"
-apply from: "../../node_modules/@sentry/react-native/sentry.gradle"
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -148,7 +147,7 @@ def getVersionCode = { ->
             return versionCodeOffset + appcenterBuildId
         } catch (ignored) {}
     }
-    return 4400000 // default higher for local builds - app center is 4300000 + build number
+    return 4550000 // default higher for local builds - app center is 4300000 + build number
 }
 
 def getNpmVersion() {
@@ -174,11 +173,21 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.nebra.helium.maker"
+        applicationId "io.clodpi.hotspots"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode getVersionCode()
         versionName getNpmVersion()
+    }
+    signingConfigs {
+        release {
+            if (project.hasProperty('APPSTORE_STORE_FILE')) {
+                storeFile file(APPSTORE_STORE_FILE)
+                storePassword APPSTORE_STORE_PASSWORD
+                keyAlias APPSTORE_KEY_ALIAS
+                keyPassword APPSTORE_KEY_PASSWORD
+            }
+        }
     }
     splits {
         abi {
@@ -198,6 +207,7 @@ android {
             }
         }
         release {
+            signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }

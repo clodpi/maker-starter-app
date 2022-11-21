@@ -1,12 +1,10 @@
-import Client, {
+import {
   AnyTransaction,
   Hotspot,
-  Network,
   PocReceiptsV1,
   ResourceList,
 } from '@helium/http'
 import { heliumHttpClient } from '@helium/react-native-sdk'
-import Config from 'react-native-config'
 import { fromNow } from './timeUtils'
 import { getAddress } from './secureAccount'
 
@@ -14,12 +12,14 @@ class StatusError extends Error {
   status: number | undefined
 }
 
-const privateHeliumClient = new Client(
-  new Network({
-    baseURL: Config.PRIVATE_HELIUM_API_URL,
-    version: 1,
-  }),
-)
+const privateHeliumClient = heliumHttpClient
+
+// const privateHeliumClient = new Client(
+//   new Network({
+//     baseURL: Config.PRIVATE_HELIUM_API_URL,
+//     version: 1,
+//   }),
+// )
 
 export const getHotspotDetails = async (address: string): Promise<Hotspot> => {
   try {

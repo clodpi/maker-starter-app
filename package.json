@@ -1,5 +1,5 @@
 {
-  "name": "Nebra",
+  "name": "ClodPiHotspots",
   "version": "1.0.5",
   "build": "2",
   "private": true,
@@ -11,7 +11,7 @@
     "start": "react-native start",
     "test": "jest",
     "icon": "yarn icon-label && yarn icon-gen && yarn icon-cleanup",
-    "icon-label": "app-icon label -i icon.png -o output.png --bottom 3.0.0",
+    "icon-label": "app-icon label -i icon.png -o output.png",
     "icon-gen": "app-icon generate -i output.png",
     "icon-cleanup": "rm output.png",
     "android-clean": "cd android && ./gradlew clean && cd ..",
@@ -64,6 +64,7 @@
     "babel-plugin-module-resolver": "^3.2.0",
     "base-64": "^1.0.0",
     "buffer": "^6.0.3",
+    "caniuse-lite": "^1.0.30001359",
     "compare-versions": "^3.6.0",
     "date-fns": "^2.16.1",
     "expo": "^43.0.3",

@@ -6,8 +6,6 @@ import Hotspots from '../../features/hotspots/root/HotspotsNavigator'
 import { TabBarIconType, MainTabType, RootNavigationProp } from './tabTypes'
 import TabBarIcon from './TabBarIcon'
 import More from '../../features/moreTab/MoreNavigator'
-import Support from '../../features/support/SupportNavigator'
-import HmDashboard from '../../features/hmDashboard/hmDashboardNavigator'
 import { RootState } from '../../store/rootReducer'
 import { useColors } from '../../theme/themeHooks'
 import { useAppDispatch } from '../../store/store'
@@ -90,8 +88,6 @@ const MainTabs = () => {
         }}
       />
       <MainTab.Screen name="More" component={More} />
-      <MainTab.Screen name="HmDashboard" component={HmDashboard} />
-      <MainTab.Screen name="Support" component={Support} />
     </MainTab.Navigator>
   )
 }
